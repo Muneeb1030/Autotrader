@@ -1,0 +1,590 @@
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Alpine&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=2&postcode=w9 1hp&make=Alpine&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=3&postcode=w9 1hp&make=Alpine&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=4&postcode=w9 1hp&make=Alpine&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Ariel&fuel-type=Bi Fuel&year-from=2010&year-to=2022
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Ariel&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=2&postcode=w9 1hp&make=Ariel&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Ariel&fuel-type=Unlisted&year-from=2010&year-to=2022
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=2&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=3&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=4&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=5&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=6&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=7&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=8&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=9&postcode=w9 1hp&make=Aston Martin&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=2&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=3&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=4&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=5&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=6&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=7&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=8&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=9&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=10&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=11&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=12&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=13&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=14&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=15&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=16&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=17&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=18&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=19&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=20&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=21&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=22&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: No module named 'openpyxl'
+https://www.autotrader.co.uk/car-search?page=1&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=2&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=3&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=4&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=5&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: [Errno 13] Permission denied: 'autotrader_info_2024-04-28_01-33-35.xlsx'
+https://www.autotrader.co.uk/car-search?page=7&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=8&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=9&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=10&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=11&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=12&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=13&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=14&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=15&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=16&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=17&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=18&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=19&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=20&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=21&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=22&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=23&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=24&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=25&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=26&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=27&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=28&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=29&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=30&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=31&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=32&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=33&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=34&postcode=w9 1hp&make=Abarth&fuel-type=Petrol&year-from=2010&year-to=2022
+An error occurred: Message: Navigation timed out after 300000 ms
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+TimeoutError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:740:5
+bail@chrome://remote/content/marionette/sync.sys.mjs:211:19
+
+https://www.autotrader.co.uk/car-search?page=29&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=30&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=31&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=32&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=33&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=34&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=35&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=36&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=37&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=38&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=39&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=40&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=41&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=42&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=43&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=44&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=45&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=46&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=47&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=48&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=49&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=50&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=51&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=52&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=53&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=54&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=55&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=56&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=57&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=58&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=59&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=60&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=61&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=62&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=63&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=64&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=65&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=66&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=67&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=68&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=69&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=70&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=71&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=72&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=73&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=74&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=75&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=76&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=77&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=78&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=79&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=80&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=81&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=82&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=83&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=84&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=85&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=86&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=87&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=88&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=89&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=90&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=91&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=92&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=93&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=94&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=95&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=96&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=97&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=98&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=99&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=100&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=101&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Hybrid&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Plug-in Hybrid&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Unlisted&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Bi Fuel&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel Plug-in Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Electric&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Plug-in Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Unlisted&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Bi Fuel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=2&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=3&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=4&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=5&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=6&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=7&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=8&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=9&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=10&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=11&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=12&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=13&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=14&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=15&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=16&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=17&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=18&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=19&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=20&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=21&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=22&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=23&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=24&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Bi Fuel&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel Hybrid&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel Plug-in Hybrid&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Electric&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Hybrid&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Plug-in Hybrid&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Unlisted&make=Yamaha&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Bi Fuel&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel Plug-in Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Electric&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Petrol Plug-in Hybrid&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Unlisted&make=Westfield&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Bi Fuel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Sheet 'Sheet1' already exists and if_sheet_exists is set to 'error'.
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=2&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=3&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=4&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=5&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=6&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=7&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=8&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=9&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=10&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=11&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=12&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=13&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: isfile: path should be string, bytes, os.PathLike or integer, not TextIOWrapper
+https://www.autotrader.co.uk/car-search?page=14&fuel-type=Diesel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: [Errno 13] Permission denied: 'autotrader_info_2024-04-28_22-23-40.xlsx'
+https://www.autotrader.co.uk/car-search?page=1&fuel-type=Bi Fuel&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: [Errno 13] Permission denied: 'autotrader_info_2024-04-28_22-23-40.xlsx'
+https://www.autotrader.co.uk/car-search?page=10&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=11&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=12&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=13&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=14&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=15&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=16&fuel-type=Petrol&make=Volvo&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: Message: Navigation timed out after 300000 ms
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+TimeoutError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:740:5
+bail@chrome://remote/content/marionette/sync.sys.mjs:211:19
+
+https://www.autotrader.co.uk/car-search?page=11&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=12&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=13&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=14&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=15&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=16&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=17&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=18&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=19&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=20&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=21&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=22&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=23&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=24&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=25&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=26&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=27&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=28&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=29&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=30&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=31&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=32&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=33&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=34&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=35&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=36&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=37&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=38&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=39&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=40&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=41&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=42&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=43&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=44&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=45&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=46&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=47&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=48&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=49&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=50&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=51&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=52&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=53&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=54&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=55&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=56&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=57&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=58&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=59&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=60&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=61&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=62&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=63&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=64&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=65&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=66&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=67&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=68&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=69&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=70&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=71&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=72&fuel-type=Electric&make=Volkswagen&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: [Errno 13] Permission denied: 'autotrader_info_2024-04-28_22-41-14.xlsx'
+https://www.autotrader.co.uk/car-search?page=10&fuel-type=Petrol Plug-in Hybrid&make=Vauxhall&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=11&fuel-type=Petrol Plug-in Hybrid&make=Vauxhall&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=12&fuel-type=Petrol Plug-in Hybrid&make=Vauxhall&postcode=w9 1hp&year-from=2010&year-to=2022
+An error occurred: I/O operation on closed file.
+https://www.autotrader.co.uk/car-search?page=13&fuel-type=Petrol Plug-in Hybrid&make=Vauxhall&postcode=w9 1hp&year-from=2010&year-to=2022
