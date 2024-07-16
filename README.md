@@ -35,7 +35,7 @@ python auto_trader.py
 ## Additional Information
 - **Customization:** Modify config.txt to add or change search queries as per your requirements.
 - **GitHub Repository:** Explore and contribute to the project on GitHub.
-- 
+  
 ## Disclaimer: 
 This scraper should be used responsibly and in accordance with AutoTrader.com's terms of service.
 
