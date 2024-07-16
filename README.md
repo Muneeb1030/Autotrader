@@ -13,7 +13,7 @@ The Auto Trader Web Scraper project automates the extraction of vehicle listings
 - BeautifulSoup (bs4)
 - Requests
 - Pandas
-- 
+  
 ## Getting Started
 Clone the Repository:
 
