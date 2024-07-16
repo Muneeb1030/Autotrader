@@ -18,7 +18,7 @@ The Auto Trader Web Scraper project automates the extraction of vehicle listings
 Clone the Repository:
 
 ```bash
-https://github.com/Muneeb1030/Autotrader.git
+https://github.com/Muneeb1030/Autotrader_Web_Scapper.git
 cd auto-trader-scraper
 ```
 ## Install Dependencies:
