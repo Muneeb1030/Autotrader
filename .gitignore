@@ -1,4 +1,129 @@
+### VisualStudioCode template
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### JetBrains template
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/mongoSettings.xml
+.idea_modules/
+atlassian-ide-plugin.xml
+.idea/replstate.xml
+.idea/httpRequests
+.idea/caches/build_file_checksums.ser
+cmake-build-*/
+*.iws
+out/
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+### macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Python
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+.venv/
 venv/
-.git/
-.vscode/
-instructions.txt
+env/
+.env/
+
+# uv
+.uv/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Type-checker caches
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# Test & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+*.coveragerc
+
+# Ruff cache
+.ruff_cache/
+
+### TypeScript / Node
+# Dependencies
+node_modules/
+
+# Build output
+ui/dist/
+ui/build/
+
+# Vite
+*.local
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Package manager locks (keep one — whichever the project uses)
+# pnpm-lock.yaml  # uncomment to ignore
+# yarn.lock       # uncomment to ignore
+
+# Environment & logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+### Secrets / environment
+.env
+.env.*
+!.env.template

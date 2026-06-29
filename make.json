@@ -1,37 +1,14 @@
 [
     {
-    "displayName": "Toyota",
-    "uriValue": "Toyota",
-    "count": "19,038"
+        "displayName": "Porsche",
+        "uriValue": "Porsche",
+        "model": "Taycan",
+        "fuelType": "Electric"
     },
     {
-    "displayName": "Triumph",
-    "uriValue": "Triumph",
-    "count": "28"
-    },
-    {
-    "displayName": "TVR",
-    "uriValue": "TVR",
-    "count": "63"
-    },
-    {
-    "displayName": "Ultima",
-    "uriValue": "Ultima",
-    "count": "2"
-    },
-    {
-    "displayName": "Vauxhall",
-    "uriValue": "Vauxhall",
-    "count": "29,102"
-    },
-    {
-    "displayName": "Volkswagen",
-    "uriValue": "Volkswagen",
-    "count": "38,175"
-    },
-    {
-    "displayName": "Volvo",
-    "uriValue": "Volvo",
-    "count": "10,100"
+        "displayName": "Hyundai",
+        "uriValue": "Hyundai",
+        "model": "Ioniq 5",
+        "fuelType": "Electric"
     }
-    ]
+]
