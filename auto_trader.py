@@ -184,6 +184,10 @@ def get_total_pages(postcode, make, model, trim, fuel, year_from, year_to, radiu
                     )
                     continue
 
+                # Brief pause to let React finish hydrating the infinite-scroll
+                # container before we start measuring page height.
+                time.sleep(2)
+
                 # Scroll to trigger lazy-loading of all listings
                 scrolls = scroll_to_load_all()
                 log.info("Page %d: scrolling complete (%d scrolls)", page_number, scrolls)
