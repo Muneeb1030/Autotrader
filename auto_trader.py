@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import re
 import time
 from datetime import datetime
@@ -10,6 +11,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -60,7 +62,7 @@ def scroll_to_load_all(pause: float = 1.5, max_scrolls: int = 30) -> int:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
         time.sleep(pause)
         new_height = driver.execute_script("return document.body.scrollHeight")
-        listing_count = len(driver.find_elements(By.CSS_SELECTOR, 'ul[data-testid="desktop-search"] > li'))
+        listing_count = len(driver.find_elements(By.CSS_SELECTOR, 'a[data-testid="search-listing-title"]'))
         log.debug(
             "scroll_to_load_all: scroll %d — height %d → %d, listings visible: %d",
             scroll_n,
@@ -80,7 +82,33 @@ def scroll_to_load_all(pause: float = 1.5, max_scrolls: int = 30) -> int:
     return max_scrolls
 
 
-def get_total_pages(postcode, make, model, fuel, year_from, year_to, output_file, page_start=1):
+def setup_cookies():
+    """Set AutoTrader consent cookies to bypass the Sourcepoint CMP dialog.
+
+    The site checks for ``atwv=1`` to skip loading the CMP script entirely, and
+    ``acceptATCookies=true`` to treat consent as already given. Without these,
+    the consent wall blocks listings from rendering.
+
+    Must be called after the browser has made at least one request to the
+    autotrader.co.uk domain so the cookies can be scoped correctly.
+    """
+    log.info("Setting consent cookies on autotrader.co.uk")
+    driver.get("https://www.autotrader.co.uk")
+    time.sleep(2)
+    for name, value in [("acceptATCookies", "true"), ("atwv", "1")]:
+        try:
+            driver.add_cookie(
+                {"name": name, "value": value, "domain": ".autotrader.co.uk", "path": "/"}
+            )
+            log.debug("Cookie set: %s=%s", name, value)
+        except Exception as e:
+            log.warning("Failed to set cookie %s: %s", name, e)
+    log.info("Consent cookies set — reloading")
+    driver.refresh()
+    time.sleep(1)
+
+
+def get_total_pages(postcode, make, model, trim, fuel, year_from, year_to, radius, output_file, page_start=1):
     try:
         url = "https://www.autotrader.co.uk/car-search"
         encoded_postcode = quote_plus(postcode)
@@ -89,8 +117,11 @@ def get_total_pages(postcode, make, model, fuel, year_from, year_to, output_file
         encoded_fuel = quote_plus(fuel)
 
         model_param = f"&model={encoded_model}" if encoded_model else ""
+        encoded_trim = quote_plus(trim) if trim else ""
+        trim_param = f"&aggregatedTrim={encoded_trim}" if encoded_trim else ""
         page_url = (
-            f"{url}?fuel-type={encoded_fuel}&make={encoded_make}{model_param}&postcode={encoded_postcode}&year-from={year_from}&year-to={year_to}"
+            f"{url}?fuel-type={encoded_fuel}&make={encoded_make}{model_param}{trim_param}"
+            f"&postcode={encoded_postcode}&radius={radius}&year-from={year_from}&year-to={year_to}"
         )
         log.debug("Loading search URL: %s", page_url)
         driver.get(page_url)
@@ -122,27 +153,36 @@ def get_total_pages(postcode, make, model, fuel, year_from, year_to, output_file
             log.debug("Page HTML snippet (first 2000 chars):\n%s", body_snippet)
             total_pages = 1
 
-        log.info("Total pages for make=%r model=%r fuel=%r: %d", make, model, fuel, total_pages)
+        log.info("Total pages for make=%r model=%r trim=%r fuel=%r: %d", make, model, trim, fuel, total_pages)
 
         for page_number in range(page_start, total_pages + 1):
             try:
                 cars_data = []
                 page_url = (
-                    f"{url}?page={page_number}&fuel-type={fuel}&make={make}{model_param}&postcode={postcode}&year-from={year_from}&year-to={year_to}"
+                    f"{url}?page={page_number}&fuel-type={fuel}&make={make}{model_param}{trim_param}"
+                    f"&postcode={postcode}&radius={radius}&year-from={year_from}&year-to={year_to}"
                 )
                 log.info("Fetching page %d / %d  — %s", page_number, total_pages, page_url)
                 driver.get(page_url)
 
-                # Wait for the listing container to appear before scrolling
+                # Wait up to 60 s for actual listing cards to appear (not skeletons).
+                # `a[data-testid="search-listing-title"]` is only present once React
+                # has replaced the skeleton placeholders with real data.
                 try:
-                    wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'ul[data-testid="desktop-search"]')))
-                    log.debug("Listing container found on page %d", page_number)
+                    WebDriverWait(driver, 60).until(
+                        EC.presence_of_element_located(
+                            (By.CSS_SELECTOR, 'a[data-testid="search-listing-title"]')
+                        )
+                    )
+                    log.debug("Listing cards rendered on page %d", page_number)
                 except Exception:
                     log.warning(
-                        "Timed out waiting for 'desktop-search' list on page %d. Current URL: %s — page may not have loaded results.",
+                        "Timed out (60 s) waiting for listing cards on page %d. "
+                        "Current URL: %s — skipping page.",
                         page_number,
                         driver.current_url,
                     )
+                    continue
 
                 # Scroll to trigger lazy-loading of all listings
                 scrolls = scroll_to_load_all()
@@ -151,18 +191,30 @@ def get_total_pages(postcode, make, model, fuel, year_from, year_to, output_file
                 page_html = driver.page_source
                 soup = BeautifulSoup(page_html, "html.parser")
 
-                # index 0 is a non-listing element (e.g. sponsored/header); skip it
-                all_li = soup.select('ul[data-testid="desktop-search"] > li')
+                # Find all real listing cards via their title anchor.
+                # Selector-drift-resistant: only matches loaded cards, not skeleton
+                # placeholders, ads, or container elements.
+                title_links = soup.select('a[data-testid="search-listing-title"]')
+                seen: set = set()
+                li_elements = []
+                for link in title_links:
+                    parent_li = link.find_parent("li")
+                    if parent_li and id(parent_li) not in seen:
+                        seen.add(id(parent_li))
+                        li_elements.append(parent_li)
+
                 log.debug(
-                    "Page %d: 'desktop-search' list has %d <li> elements after full scroll",
+                    "Page %d: found %d listing cards via search-listing-title anchors",
                     page_number,
-                    len(all_li),
+                    len(li_elements),
                 )
-                if not all_li:
+                if not li_elements:
                     log.warning(
-                        "Page %d: 'ul[data-testid=\"desktop-search\"]' returned 0 elements. The selector may have changed. Page title: %r",
+                        "Page %d: 0 listing cards found after full scroll. "
+                        "Page title: %r  Current URL: %s",
                         page_number,
                         soup.title.text if soup.title else "N/A",
+                        driver.current_url,
                     )
                     log.debug(
                         "Page %d HTML snippet (first 3000 chars):\n%s",
@@ -170,13 +222,10 @@ def get_total_pages(postcode, make, model, fuel, year_from, year_to, output_file
                         page_html[:3000],
                     )
 
-                li_elements = all_li[1:]  # skip first non-listing element
-                log.debug("Page %d: processing %d listing elements", page_number, len(li_elements))
-
                 for idx, li_element in enumerate(li_elements):
                     title = get_title(li_element)
                     price_text = get_price(li_element)
-                    year, miles, fuel_type = get_other_car_data(li_element)
+                    year, miles, fuel_type = get_other_car_data(li_element, default_fuel=fuel)
 
                     if title is None:
                         log.warning(
@@ -234,74 +283,128 @@ def get_total_pages(postcode, make, model, fuel, year_from, year_to, output_file
                     log_f.write(f"An error occurred: {e}\n")
                     log_f.write(f"{page_url}\n")
     except Exception as e:
-        log.exception("Fatal error in get_total_pages (make=%r model=%r fuel=%r): %s", make, model, fuel, e)
+        log.exception("Fatal error in get_total_pages (make=%r model=%r trim=%r fuel=%r): %s", make, model, trim, fuel, e)
 
 
 def get_make_data():
-    """Return list of (uriValue, model, fuelType) tuples from make.json.
+    """Return list of (uriValue, model, fuelType, aggregatedTrim) tuples from make.json.
 
-    ``model`` and ``fuelType`` default to empty string if not set.
+    ``model``, ``fuelType``, and ``aggregatedTrim`` default to empty string if not set.
     """
     with open("make.json", "r") as f:
         json_list = json.load(f)
 
-    entries = [(entry["uriValue"], entry.get("model", ""), entry.get("fuelType", "")) for entry in json_list][::-1]
+    entries = [
+        (
+            entry["uriValue"],
+            entry.get("model", ""),
+            entry.get("fuelType", ""),
+            entry.get("aggregatedTrim", ""),
+        )
+        for entry in json_list
+    ][::-1]
     log.debug("get_make_data: loaded %d make/model entries", len(entries))
     return entries
 
 
-def get_other_car_data(li_element):
-    ul_ele = li_element.select('ul[data-testid="search-listing-specs"]')
+def get_other_car_data(li_element, default_fuel: str = "NA"):
     year = miles = fuel_type = "NA"
-    if not ul_ele:
-        log.debug("get_other_car_data: no specs list found in li element")
-        return year, miles, fuel_type
-    for li_ele in ul_ele:
-        li_items_sub = li_ele.select("li")
-        if not li_items_sub:
-            log.debug("get_other_car_data: specs ul has no <li> children")
-            continue
-        li_text_combined = " ".join(li.text for li in li_items_sub)
-        log.debug("get_other_car_data: specs text: %r", li_text_combined)
-        pattern = r"(\d+(?:,\d{3})?\s*mile(?:s)?)\s*.*?(\b" + r"\b|\b".join(map(re.escape, _FUEL_TYPE_NAMES)) + r"\b)"
-        match = re.search(pattern, li_text_combined)
-        year = li_items_sub[0].text
-        if match:
-            miles = match.group(1)
-            fuel_type = match.group(2)
-        else:
-            log.debug(
-                "get_other_car_data: miles/fuel regex did not match. Combined specs text: %r",
+
+    # Log all data-testid attributes present in this card for selector diagnosis
+    testids = [el.get("data-testid") for el in li_element.find_all(attrs={"data-testid": True})]
+    log.debug("get_other_car_data: data-testid attrs in card: %s", testids)
+
+    # --- 1. Try known specs container selectors (broadest to narrowest) ---
+    specs_container = (
+        li_element.select_one('[data-testid="search-listing-specs"]')
+        or li_element.select_one('[data-testid*="spec"]')
+        or li_element.select_one('[data-testid*="key-spec"]')
+    )
+
+    if specs_container:
+        spec_items = specs_container.select("li") or specs_container.find_all(True, recursive=False)
+        if spec_items:
+            li_text_combined = " ".join(item.get_text(strip=True) for item in spec_items)
+            log.debug("get_other_car_data: specs container text: %r", li_text_combined)
+            year = spec_items[0].get_text(strip=True)
+            miles_match = re.search(r"(\d[\d,]*\s*miles?)", li_text_combined, re.IGNORECASE)
+            fuel_match = re.search(
+                r"\b(" + "|".join(map(re.escape, _FUEL_TYPE_NAMES)) + r")\b",
                 li_text_combined,
+                re.IGNORECASE,
             )
+            if miles_match:
+                miles = miles_match.group(1)
+            if fuel_match:
+                fuel_type = fuel_match.group(1)
+            return year, miles, fuel_type
+
+    # --- 2. Fallback: scan the full card text for year, mileage, fuel type ---
+    # AutoTrader may change data-testid values; text patterns are stable.
+    full_text = li_element.get_text(separator=" ", strip=True)
+    log.debug("get_other_car_data: full card text (first 400 chars): %r", full_text[:400])
+
+    # Year: 4-digit year in the range 2010–2035, optionally followed by plate info e.g. "(21 reg)"
+    year_match = re.search(r"\b(20[1-3]\d)\b", full_text)
+    if year_match:
+        year = year_match.group(1)
+
+    miles_match = re.search(r"(\d[\d,]*\s*miles?)", full_text, re.IGNORECASE)
+    if miles_match:
+        miles = miles_match.group(1)
+
+    fuel_match = re.search(
+        r"\b(" + "|".join(map(re.escape, _FUEL_TYPE_NAMES)) + r")\b",
+        full_text,
+        re.IGNORECASE,
+    )
+    if fuel_match:
+        fuel_type = fuel_match.group(1)
+
+    if fuel_type == "NA" and default_fuel != "NA":
+        fuel_type = default_fuel
+
+    if year == "NA" or miles == "NA":
+        log.debug(
+            "get_other_car_data: fallback scan result — year=%r miles=%r fuel=%r. "
+            "Li HTML (first 1500 chars):\n%s",
+            year,
+            miles,
+            fuel_type,
+            li_element.prettify()[:1500],
+        )
+
     return year, miles, fuel_type
 
 
 def get_title(li_element):
-    anchor_with_tag_id = li_element.select_one('a[data-testid="search-listing-title"]')
-    if not anchor_with_tag_id:
+    anchor = li_element.select_one('a[data-testid="search-listing-title"]')
+    if not anchor:
         log.debug("get_title: anchor a[data-testid='search-listing-title'] not found")
         return None
-    first_h3_child = anchor_with_tag_id.select_one("h3")
-    if not first_h3_child:
-        log.debug(
-            "get_title: <h3> not found inside title anchor. Anchor HTML: %s",
-            anchor_with_tag_id.prettify()[:300],
-        )
+    # Title text sits directly inside the anchor (no h3 wrapper in current markup)
+    title = anchor.get_text(strip=True)
+    if not title:
+        log.debug("get_title: anchor found but contained no text. HTML: %s", anchor.prettify()[:400])
         return None
-    return first_h3_child.text
+    return title
 
 
 def get_price(li_element):
-    price = li_element.select_one("span.at__sc-1mc7cl3-5.edXwbj")
-    if not price:
-        candidates = li_element.select("span[class*='price'], span[data-testid*='price']")
-        log.debug(
-            "get_price: selector 'span.at__sc-1mc7cl3-5.edXwbj' found nothing. Candidate price spans: %s",
-            [str(c)[:120] for c in candidates],
-        )
-        return None
-    return price.text.replace("£", "")
+    # Try stable data-testid selector first
+    price_elem = li_element.select_one('[data-testid*="price"]')
+    if price_elem:
+        return price_elem.get_text(strip=True).replace("£", "").replace(",", "").strip()
+
+    # Fall back: any element whose text starts with £
+    for elem in li_element.find_all(string=re.compile(r"^£[\d,]+")):
+        return str(elem).replace("£", "").replace(",", "").strip()
+
+    log.debug(
+        "get_price: no price element found. Li HTML snippet: %s",
+        li_element.prettify()[:600],
+    )
+    return None
 
 
 def get_config(filename):
@@ -309,7 +412,7 @@ def get_config(filename):
     df = pd.read_csv(filename)
     log.info("Config rows: %d", len(df))
     output_file = get_file_name()
-    log.info("Output file: %s", output_file)
+    log.info("Output file (if data found): %s", output_file)
     makes = get_make_data()
     log.info("Makes loaded: %d", len(makes))
     for index, row in df.iterrows():
@@ -317,27 +420,43 @@ def get_config(filename):
         page_number = row["PageNumber"]
         year_from = row["year-from"]
         year_to = row["year-to"]
-        for make, model, fuel_type in makes:
+        radius = row["radius"]
+        for make, model, fuel_type, trim in makes:
             log.info(
-                "Row %d — postcode=%r make=%r model=%r fuel=%r years=%s–%s start_page=%s",
+                "Row %d — postcode=%r make=%r model=%r trim=%r fuel=%r years=%s–%s radius=%s start_page=%s",
                 index + 1,
                 postal_code,
                 make,
                 model or "(all)",
+                trim or "(all)",
                 fuel_type,
                 year_from,
                 year_to,
+                radius,
                 page_number,
             )
             sleep(1)
-            get_total_pages(postal_code, make, model, fuel_type, year_from, year_to, output_file, page_number)
-    log.info("Scrape complete. Output: %s", output_file)
+            get_total_pages(postal_code, make, model, trim, fuel_type, year_from, year_to, radius, output_file, page_number)
+
+    if os.path.exists(output_file):
+        saved_df = pd.read_excel(output_file)
+        total_rows = len(saved_df)
+        log.info("Scrape complete. %d car(s) saved to %s", total_rows, output_file)
+    else:
+        log.warning(
+            "Scrape complete. 0 cars scraped — no output file was created. "
+            "Check the WARNING/DEBUG lines above for selector or consent issues."
+        )
 
 
-def save_data(output_file, cars_data):
+def save_data(output_file, cars_data) -> int:
+    """Save cars_data to the xlsx file, deduplicating against existing rows.
+
+    Returns the number of rows written to the file after this call.
+    """
     if not cars_data:
         log.warning("save_data called with empty cars_data — nothing to save")
-        return
+        return 0
 
     log.debug("save_data: %d rows incoming", len(cars_data))
     try:
@@ -370,6 +489,7 @@ def save_data(output_file, cars_data):
     log.info("save_data: writing %d rows to %s", len(df_no_na), output_file)
     df_no_na.to_excel(output_file, index=False)
     log.debug("save_data: write complete")
+    return len(df_no_na)
 
 
 def get_file_name():
@@ -381,10 +501,15 @@ def get_file_name():
 def main():
     global driver, wait
     log.info("Starting AutoTrader scraper")
-    driver = webdriver.Firefox()
+    options = Options()
+    # 'eager' returns as soon as DOMContentLoaded fires — does not wait for ads,
+    # tracking pixels, and other third-party resources that can hang indefinitely.
+    options.page_load_strategy = "eager"
+    driver = webdriver.Firefox(options=options)
     driver.maximize_window()
     wait = WebDriverWait(driver, 360)
     try:
+        setup_cookies()
         get_config(enter_path_of_config_file)
     finally:
         log.info("Quitting browser")

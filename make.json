@@ -3,12 +3,7 @@
         "displayName": "Porsche",
         "uriValue": "Porsche",
         "model": "Taycan",
-        "fuelType": "Electric"
-    },
-    {
-        "displayName": "Hyundai",
-        "uriValue": "Hyundai",
-        "model": "Ioniq 5",
-        "fuelType": "Electric"
+        "fuelType": "Electric",
+        "aggregatedTrim": "4S"
     }
 ]

@@ -9,6 +9,7 @@ run:
 # Clean generated output files
 clean:
     rm -f autotrader_info_*.xlsx error_log.txt
+    rm -f scraper.log
 
 # Show outdated dependencies
 outdated:
