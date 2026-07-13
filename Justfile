@@ -1,3 +1,6 @@
+list:
+    just --list
+
 # Install / sync dependencies
 sync:
     uv sync
@@ -44,7 +47,7 @@ pysentry:
 
 # Run SAST scan
 semgrep:
-    semgrep --config auto api/
+    semgrep --config auto
 
 # Run all static-analysis checks
 check: lint fmt-check typecheck
