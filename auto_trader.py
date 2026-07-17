@@ -322,6 +322,16 @@ def get_extras(detail_url: str) -> tuple[dict[str, int], str]:
     return matched, ", ".join(unmatched_list)
 
 
+def _title_matches(title: str, make: str, model: str) -> bool:
+    """Return True if *title* contains both the make and model name (case-insensitive)."""
+    lower = title.lower()
+    if make and make.lower() not in lower:
+        return False
+    if model and model.lower() not in lower:
+        return False
+    return True
+
+
 # ---------------------------------------------------------------------------
 # Search-page scraping
 # ---------------------------------------------------------------------------
@@ -336,6 +346,7 @@ def get_total_pages(
     year_from: str,
     year_to: str,
     radius: str,
+    price_to: str,
     output_file: str,
     page_start: int = 1,
 ) -> None:
@@ -349,10 +360,11 @@ def get_total_pages(
 
         model_param = f"&model={encoded_model}" if encoded_model else ""
         trim_param = f"&aggregatedTrim={encoded_trim}" if encoded_trim else ""
+        price_to_param = f"&price-to={quote_plus(price_to)}" if price_to else ""
 
         count_url = (
             f"{base_url}?fuel-type={encoded_fuel}&make={encoded_make}{model_param}{trim_param}"
-            f"&postcode={encoded_postcode}&radius={radius}"
+            f"&postcode={encoded_postcode}&radius={radius}{price_to_param}"
             f"&year-from={year_from}&year-to={year_to}"
         )
         log.debug("Loading search URL: %s", count_url)
@@ -395,7 +407,7 @@ def get_total_pages(
                 page_url = (
                     f"{base_url}?page={page_number}&fuel-type={encoded_fuel}&make={encoded_make}"
                     f"{model_param}{trim_param}&postcode={postcode}&radius={radius}"
-                    f"&year-from={year_from}&year-to={year_to}"
+                    f"{price_to_param}&year-from={year_from}&year-to={year_to}"
                 )
                 log.info("Fetching page %d / %d  — %s", page_number, total_pages, page_url)
                 driver.get(page_url)
@@ -497,9 +509,25 @@ def get_total_pages(
                         }
                     )
 
+                # --- Filter: drop listings that don't match the expected make/model ---
+                # AutoTrader occasionally returns unrelated makes in search results.
+                # Filter before visiting detail pages to avoid wasting time.
+                before_filter = len(raw_listings)
+                raw_listings = [r for r in raw_listings if _title_matches(r.get("Title") or "", make, model)]
+                skipped = before_filter - len(raw_listings)
+                if skipped:
+                    log.info(
+                        "Page %d: filtered out %d listing(s) not matching make=%r model=%r",
+                        page_number,
+                        skipped,
+                        make,
+                        model,
+                    )
+
                 # --- Pass 2: visit each detail page and collect extras ---
                 for raw in raw_listings:
                     d_url: str | None = raw.pop("_detail_url")
+                    raw["Detail_URL"] = d_url or ""
                     if d_url and EXTRA_COLUMNS:
                         extras_matched, extras_other = get_extras(d_url)
                         raw.update(extras_matched)
@@ -528,20 +556,21 @@ def get_total_pages(
 # ---------------------------------------------------------------------------
 
 
-def get_make_data() -> list[tuple[str, str, str, str]]:
-    """Return ``[(uriValue, model, fuelType, aggregatedTrim)]`` from make.json.
+def get_make_data() -> list[tuple[str, str, str, str, str]]:
+    """Return ``[(uriValue, model, fuelType, aggregatedTrim, price_to)]`` from make.json.
 
     The list is reversed so that the last entry in the file is processed first
     (legacy behaviour — preserves run order from earlier versions).
     """
     with open("make.json", encoding="utf-8") as f:
         json_list = json.load(f)
-    entries: list[tuple[str, str, str, str]] = [
+    entries: list[tuple[str, str, str, str, str]] = [
         (
             entry["uriValue"],
             entry.get("model", ""),
             entry.get("fuelType", ""),
             entry.get("aggregatedTrim", ""),
+            str(entry["price-to"]) if entry.get("price-to") else "",
         )
         for entry in json_list
     ][::-1]
@@ -684,8 +713,8 @@ def save_data(file: str, cars_data: list[dict]) -> int:
         log.debug("save_data: no data to save")
         return 0
 
-    core_cols = ["Title", "Price", "Year", "Miles", "Fuel_Type"]
-    tail_cols = ["Extras_Total", "Extras_Other"]
+    core_cols = ["Title", "Price", "Extras_Total", "Year", "Miles", "Fuel_Type", "Detail_URL"]
+    tail_cols = ["Extras_Other"]
     all_cols = core_cols + EXTRA_COLUMNS + tail_cols
 
     try:
@@ -704,9 +733,16 @@ def save_data(file: str, cars_data: list[dict]) -> int:
 
     for col in tail_cols:
         if col not in df.columns:
-            df[col] = 0 if col == "Extras_Total" else ""
+            df[col] = ""
         if col not in older.columns:
-            older[col] = 0 if col == "Extras_Total" else ""
+            older[col] = ""
+
+    # Ensure Extras_Total and Detail_URL columns are present
+    for col, default in [("Extras_Total", 0), ("Detail_URL", "")]:
+        if col not in df.columns:
+            df[col] = default
+        if col not in older.columns:
+            older[col] = default
 
     # Recompute Extras_Total from individual extra columns
     if EXTRA_COLUMNS:
@@ -742,9 +778,9 @@ def get_config(filename: str) -> None:
         year_from = row["year-from"]
         year_to = row["year-to"]
         radius = row["radius"]
-        for make, model, fuel_type, trim in makes:
+        for make, model, fuel_type, trim, price_to in makes:
             log.info(
-                "Row %d — postcode=%r make=%r model=%r trim=%r fuel=%r years=%s–%s radius=%s start_page=%s",
+                "Row %d — postcode=%r make=%r model=%r trim=%r fuel=%r years=%s–%s radius=%s price-to=%s start_page=%s",
                 row_num,
                 postal_code,
                 make,
@@ -754,6 +790,7 @@ def get_config(filename: str) -> None:
                 year_from,
                 year_to,
                 radius,
+                price_to or "(any)",
                 page_number,
             )
             time.sleep(1)
@@ -766,6 +803,7 @@ def get_config(filename: str) -> None:
                 str(year_from),
                 str(year_to),
                 str(radius),
+                price_to,
                 output_file,
                 int(page_number),
             )

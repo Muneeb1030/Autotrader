@@ -127,3 +127,9 @@ pnpm-debug.log*
 .env
 .env.*
 !.env.template
+
+### Scraper output
+*.xlsx
+~$*
+error_log.txt
+scraper.log
