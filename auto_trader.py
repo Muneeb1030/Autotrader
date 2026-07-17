@@ -33,8 +33,11 @@ _FUEL_TYPE_NAMES = [
 driver: webdriver.Firefox  # type: ignore[assignment]
 wait: WebDriverWait  # type: ignore[assignment]
 
-# Extras price lookup — populated by _load_extras_prices() at startup
-EXTRAS_PRICES: dict[str, int] = {}
+# Extras price lookup — populated by _load_extras_prices() at startup.
+# Outer key: "{Make}_{Model}" (spaces replaced with underscores), e.g. "Porsche_Taycan".
+# Inner dict: canonical extra name → GBP list price.
+EXTRAS_PRICES: dict[str, dict[str, int]] = {}
+# Union of all canonical extra names across every model segment — used for spreadsheet columns.
 EXTRA_COLUMNS: list[str] = []
 
 # ---------------------------------------------------------------------------
@@ -63,7 +66,14 @@ log.addHandler(_fh)
 
 
 def _load_extras_prices() -> None:
-    """Populate EXTRAS_PRICES and EXTRA_COLUMNS from extras_prices.json."""
+    """Populate EXTRAS_PRICES and EXTRA_COLUMNS from extras_prices.json.
+
+    ``extras_prices.json`` is a nested object keyed by ``"{Make}_{Model}"``
+    (spaces replaced with underscores).  Each value is a flat mapping of
+    canonical extra name → GBP list price.  ``EXTRA_COLUMNS`` is built as
+    the ordered union of all extras across every model segment so that the
+    spreadsheet always has a consistent, complete set of columns.
+    """
     global EXTRAS_PRICES, EXTRA_COLUMNS
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "extras_prices.json")
     if not os.path.exists(path):
@@ -71,8 +81,36 @@ def _load_extras_prices() -> None:
         return
     with open(path, encoding="utf-8") as f:
         EXTRAS_PRICES = json.load(f)
-    EXTRA_COLUMNS = list(EXTRAS_PRICES.keys())
-    log.info("Loaded %d extras from extras_prices.json", len(EXTRA_COLUMNS))
+    # Build the union of all extras in insertion order, deduplicating across segments.
+    seen: dict[str, None] = {}
+    for segment in EXTRAS_PRICES.values():
+        for name in segment:
+            seen[name] = None
+    EXTRA_COLUMNS = list(seen.keys())
+    log.info(
+        "Loaded extras_prices.json: %d model segment(s), %d unique extra column(s)",
+        len(EXTRAS_PRICES),
+        len(EXTRA_COLUMNS),
+    )
+
+
+def _model_key(make: str, model: str) -> str:
+    """Return the extras_prices.json lookup key for *make* + *model*."""
+    return f"{make}_{model}".replace(" ", "_")
+
+
+def _get_model_extras(make: str, model: str) -> dict[str, int]:
+    """Return the extras price table for *make*/*model*, or ``{}`` if not found."""
+    key = _model_key(make, model)
+    prices = EXTRAS_PRICES.get(key)
+    if prices is None:
+        log.info(
+            "No extras pricing found for key %r — extras columns will be 0 for this model",
+            key,
+        )
+        return {}
+    log.debug("_get_model_extras: using segment %r (%d entries)", key, len(prices))
+    return prices
 
 
 def _normalise(text: str) -> str:
@@ -82,8 +120,8 @@ def _normalise(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _match_extra(extra_text: str) -> str | None:
-    """Return the canonical name from EXTRA_COLUMNS that best matches *extra_text*.
+def _match_extra(extra_text: str, active_prices: dict[str, int]) -> str | None:
+    """Return the canonical name from *active_prices* that best matches *extra_text*.
 
     Pipeline:
     1. Exact match after normalisation.
@@ -91,10 +129,10 @@ def _match_extra(extra_text: str) -> str | None:
        in the normalised extra text.
     """
     norm = _normalise(extra_text)
-    for canonical in EXTRA_COLUMNS:
+    for canonical in active_prices:
         if norm == _normalise(canonical):
             return canonical
-    for canonical in EXTRA_COLUMNS:
+    for canonical in active_prices:
         keywords = [w for w in _normalise(canonical).split() if len(w) >= 4]
         if keywords and all(kw in norm for kw in keywords):
             return canonical
@@ -164,8 +202,15 @@ def setup_cookies() -> None:
 # ---------------------------------------------------------------------------
 
 
-def get_extras(detail_url: str) -> tuple[dict[str, int], str]:
+def get_extras(detail_url: str, active_prices: dict[str, int]) -> tuple[dict[str, int], str]:
     """Navigate to *detail_url* and return matched extras with their list prices.
+
+    Args:
+        detail_url:    Full URL of the AutoTrader car advert page.
+        active_prices: Extras price table for the current make/model, obtained
+                       via ``_get_model_extras(make, model)``.  Only extras
+                       present in this mapping are matched and priced; others
+                       go to ``Extras_Other``.
 
     Returns:
         matched   — ``{canonical_name: list_price_gbp}`` for every extra found
@@ -173,7 +218,7 @@ def get_extras(detail_url: str) -> tuple[dict[str, int], str]:
         unmatched — comma-separated string of extras present on the car but not
                     in the price table (captured in ``Extras_Other`` column).
     """
-    if not EXTRA_COLUMNS:
+    if not active_prices:
         return {}, ""
 
     matched: dict[str, int] = {}
@@ -301,10 +346,10 @@ def get_extras(detail_url: str) -> tuple[dict[str, int], str]:
             text = re.sub(r"\s*Added\s+extra\s*$", "", raw_text, flags=re.IGNORECASE).strip()
             if not text:
                 continue
-            canonical = _match_extra(text)
+            canonical = _match_extra(text, active_prices)
             if canonical:
-                matched[canonical] = EXTRAS_PRICES[canonical]
-                log.debug("get_extras: matched %r → %r (£%d)", text, canonical, EXTRAS_PRICES[canonical])
+                matched[canonical] = active_prices[canonical]
+                log.debug("get_extras: matched %r → %r (£%d)", text, canonical, active_prices[canonical])
             else:
                 unmatched_list.append(text)
                 log.debug("get_extras: unmatched extra: %r", text)
@@ -524,12 +569,15 @@ def get_total_pages(
                         model,
                     )
 
+                # Resolve the extras price table for this make/model once per page batch.
+                active_prices = _get_model_extras(make, model)
+
                 # --- Pass 2: visit each detail page and collect extras ---
                 for raw in raw_listings:
                     d_url: str | None = raw.pop("_detail_url")
                     raw["Detail_URL"] = d_url or ""
                     if d_url and EXTRA_COLUMNS:
-                        extras_matched, extras_other = get_extras(d_url)
+                        extras_matched, extras_other = get_extras(d_url, active_prices)
                         raw.update(extras_matched)
                         raw["Extras_Other"] = extras_other
                         raw["Extras_Total"] = sum(extras_matched.values())
