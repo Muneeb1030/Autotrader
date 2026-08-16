@@ -2,6 +2,8 @@
 
 A scraper for [autotrader.co.uk](https://www.autotrader.co.uk) that searches for car listingsand extracts details by viewing each car's individual advert page. It also collect optional extras, and ouputs results to a timestamped `.xlsx` spreadsheet.
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc/4.0/)
+
 ---
 
 ## Features
