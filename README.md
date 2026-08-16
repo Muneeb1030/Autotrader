@@ -1,6 +1,6 @@
 # AutoTrader UK Web Scraper
 
-A Selenium-powered scraper for [autotrader.co.uk](https://www.autotrader.co.uk) that searches for used car listings, extracts listing details, visits each car's individual advert page to collect optional extras, and saves results to a timestamped `.xlsx` spreadsheet.
+A scraper for [autotrader.co.uk](https://www.autotrader.co.uk) that searches for car listingsand extracts details by viewing each car's individual advert page. It also collect optional extras, and ouputs results to a timestamped `.xlsx` spreadsheet.
 
 ---
 
@@ -21,10 +21,10 @@ A Selenium-powered scraper for [autotrader.co.uk](https://www.autotrader.co.uk) 
 |---|---|---|
 | [Python ≥ 3.11](https://www.python.org/downloads/) | Runtime | system / pyenv |
 | [uv](https://docs.astral.sh/uv/getting-started/installation/) | Dependency & venv management | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
-| [just](https://just.systems/man/en/packages.html) | Command runner | `brew install just` / `cargo install just` |
 | [Firefox](https://www.mozilla.org/en-GB/firefox/) | Browser for Selenium | system |
 | [geckodriver](https://github.com/mozilla/geckodriver/releases) | Firefox WebDriver bridge | must be on `PATH` |
-| [prek](https://prek.j178.dev) | Git pre-commit hooks | `cargo install prek` |
+| [just](https://just.systems/man/en/packages.html) *(optional)* | Command runner | `brew install just` / `cargo install just` |
+| [prek](https://prek.j178.dev) *(optional)* | Git pre-commit hooks | `cargo install prek` |
 | [betterleaks](https://github.com/crnvl96/betterleaks) *(optional)* | Secret scanning in pre-commit | `cargo install betterleaks` |
 
 ---
