@@ -1,0 +1,46 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+
+[[repos.hooks]]
+id = "trailing-whitespace"
+
+[[repos.hooks]]
+id = "end-of-file-fixer"
+
+[[repos.hooks]]
+id = "check-yaml"
+
+[[repos.hooks]]
+id = "check-json"
+exclude = '^(\.vscode/.*\.json|ui/tsconfig\.(app|node)\.json)$'
+
+[[repos.hooks]]
+id = "check-added-large-files"
+
+[[repos.hooks]]
+id = "check-merge-conflict"
+
+
+
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "betterleaks"
+name = "betterleaks secret scan"
+entry = """bash -c 'BL=$(command -v betterleaks || command -v /opt/homebrew/bin/betterleaks || command -v /usr/local/bin/betterleaks || command -v "$HOME/.local/bin/betterleaks" || command -v "$HOME/.cargo/bin/betterleaks" || command -v /c/ProgramData/chocolatey/bin/betterleaks || command -v "$USERPROFILE/scoop/shims/betterleaks.exe" || command -v "$LOCALAPPDATA/Microsoft/WinGet/Links/betterleaks.exe" || command -v "/c/Program Files/betterleaks/betterleaks.exe" 2>/dev/null); if [ -z "$BL" ]; then GL=$(command -v gitleaks || command -v /opt/homebrew/bin/gitleaks || command -v /usr/local/bin/gitleaks || command -v "$HOME/.local/bin/gitleaks" || command -v "$HOME/.cargo/bin/gitleaks" || command -v /c/ProgramData/chocolatey/bin/gitleaks || command -v "$USERPROFILE/scoop/shims/gitleaks.exe" || command -v "$LOCALAPPDATA/Microsoft/WinGet/Links/gitleaks.exe" || command -v "/c/Program Files/Gitleaks/gitleaks.exe" 2>/dev/null) || { echo "gitleaks not found, skipping"; exit 0; }; "$GL" git --redact=80 --no-banner --timeout 2 -v --max-target-megabytes=2 --pre-commit --staged; else "$BL"; fi'"""
+language = "system"
+pass_filenames = false
+
+
+# [[repos.hooks]]
+# id = "lint"
+# name = "Lint & Type Check"
+# entry = """bash -c 'UV=$(command -v uv || command -v /opt/homebrew/bin/uv || command -v /usr/local/bin/uv || command -v /opt/local/bin/uv || command -v "$HOME/.local/bin/uv" || command -v "$HOME/.cargo/bin/uv" || command -v "$HOME/.asdf/shims/uv" || command -v "$HOME/.pyenv/shims/uv" || command -v "$HOME/.local/share/mise/shims/uv" || command -v "$HOME/.nix-profile/bin/uv" || command -v /nix/var/nix/profiles/default/bin/uv || command -v /c/ProgramData/chocolatey/bin/uv.exe || command -v "$USERPROFILE/scoop/shims/uv.exe" || command -v "$LOCALAPPDATA/Microsoft/WinGet/Links/uv.exe" || command -v "$USERPROFILE/.cargo/bin/uv.exe" || command -v "/c/Program Files/uv/uv.exe" || command -v "/c/Program Files (x86)/uv/uv.exe" 2>/dev/null) || { echo "uv not found, skipping lint"; exit 0; }; "$UV" run ruff check --fix . && "$UV" run ruff format . && "$UV" run ty check .'"""
+# language = "system"
+# pass_filenames = false
